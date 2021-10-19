@@ -21,6 +21,8 @@ class List{
         Node* front; //points to the front of list
         Node* it; //points to the current node
         int size; // gives size
+        bool empty; //checks to see if empty
+
     public:
         List(){
             front = nullptr;
@@ -35,5 +37,27 @@ class List{
         }
         int get_iterator(){
             return it->val;
+        }
+        void begin(){
+            it = front;
+        }
+        void end(){
+            while(it->next != nullptr){            
+                it = it->next;
+            }
+        }
+        bool isEmpty(){
+            if(front == nullptr){
+                empty = true;
+            }
+            else{
+                empty = false;
+            }
+        }
+        int front(){
+            return front -> val;
+        }
+        int push_front(int x){
+            
         }
 };
