@@ -61,6 +61,8 @@ class List{
             it = it->next;
         }
         void push_front(int x){
-            
+            Node temp(x,*front);
+            front = &temp;
+            size++;
         }
 };
