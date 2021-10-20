@@ -57,7 +57,10 @@ class List{
         int front(){
             return front -> val;
         }
-        int push_front(int x){
+        void move_up(){
+            it = it->next;
+        }
+        void push_front(int x){
             
         }
 };
