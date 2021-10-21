@@ -65,4 +65,19 @@ class List{
             front = &temp;
             size++;
         }
+        void pop_front(){
+            Node *temp = front;
+            front = front->next;
+            delete temp;
+        }
+        void insert_after(int y){
+            Node toInsert(y);
+            Node *temp = &toInsert;
+            toInsert.next = it->next;
+            it->next = temp;
+            delete temp;
+        }
+        void clear(){
+            temp = front();
+        }
 };
