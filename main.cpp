@@ -1,3 +1,8 @@
+/*
+Name: Breden Hulse
+Class: Computer Science 2
+Description: It is a linked list.
+*/
 #include <iostream>
 #include "list.h"
 

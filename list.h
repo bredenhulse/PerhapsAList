@@ -36,48 +36,50 @@ class List{
             size = 1;
         }
         int get_iterator(){
-            return it->val;
+            return it->val; // Will return the value where the iterator is
         }
         void begin(){
-            it = front;
+            it = front; // will move iterator to the beginning
         }
         void end(){
             while(it->next != nullptr){            
-                it = it->next;
+                it = it->next; // will move iterator to the end
             }
         }
-        bool isEmpty(){
+        bool isEmpty(){ // Check to see if empty
             if(front == nullptr){
                 empty = true;
             }
             else{
                 empty = false;
             }
+            return empty;
         }
-        int front(){
+        int getfront(){ //Get front value
             return front -> val;
         }
-        void move_up(){
+        void move_up(){ //move iterator forward one
             it = it->next;
         }
-        void push_front(int x){
+        void push_front(int x){ //Add another value to the front
             Node temp(x,*front);
             front = &temp;
             size++;
         }
-        void pop_front(){
+        void pop_front(){ // remove the front
             Node *temp = front;
             front = front->next;
             delete temp;
         }
-        void insert_after(int y){
+        void insert_after(int y){ //insert value where desired
             Node toInsert(y);
             Node *temp = &toInsert;
             toInsert.next = it->next;
             it->next = temp;
             delete temp;
         }
-        void clear(){
-            temp = front();
+        void clear(){ //Will empty the list
+            Node *temp = front;
+            it = front;
         }
 };
