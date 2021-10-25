@@ -10,5 +10,7 @@ Description: It is a linked list.
 using namespace std;
 
 int main(){
+    ifstream infile;
+    infile open("Test.txt");
     list beiju();
 }
