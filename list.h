@@ -1,16 +1,16 @@
 struct Node{
-    int val;
+    char val;
     Node* next;
 
     Node(){
         val = 0;
         next = nullptr;
     }
-    Node(int v){
+    Node(char v){
         val = v;
         next = nullptr;
     }
-    Node(int v, Node n){
+    Node(char v, Node n){
         val = v;
         next = &n;
     }
@@ -29,7 +29,7 @@ class List{
             it = nullptr;
             size = 0;
         }
-        List(int v){
+        List(char v){
             Node n(v);
             front = &n;
             it = &n;

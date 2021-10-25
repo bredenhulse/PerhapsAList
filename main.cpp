@@ -5,10 +5,10 @@ Description: It is a linked list.
 */
 #include <iostream>
 #include "list.h"
+#include <fstream>
 
 using namespace std;
 
 int main(){
-    List l(9);
-    cout << l.get_iterator();
+    list beiju();
 }
