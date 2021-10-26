@@ -22,12 +22,15 @@ int main(){
                beiju.begin(); 
             }
             else if(testCase[i] = ']'){
-                
+                for(int j = 0; j < i; j++){
+                    beiju.move_up();
+                }
             }
             else{
-
+                fout << beiju.get_iterator();
             }
         }
     }
     infile.close();
+    fout.close();
 }
