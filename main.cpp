@@ -17,7 +17,7 @@ int main(){
     fout.open("outfile");
     string testCase;
     while(infile >> testCase){
-        for(i = 0; i < testCase.length; i++){
+        for(int i = 0; i < testCase.size(); i++){
             if(testCase[i] = '['){
                beiju.begin(); 
             }
