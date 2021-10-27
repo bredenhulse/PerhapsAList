@@ -66,7 +66,7 @@ class List{
         void move_up(){ //move iterator forward one
             it = it->next;
         }
-        void push_front(int x){ //Add another value to the front
+        void push_front(char x){ //Add another value to the front
             Node temp(x,*front);
             front = &temp;
             size++;
@@ -76,7 +76,7 @@ class List{
             front = front->next;
             delete temp;
         }
-        void insert_after(int y){ //insert value where desired
+        void insert_after(char y){ //insert value where desired
             Node toInsert(y);
             Node *temp = &toInsert;
             toInsert.next = it->next;

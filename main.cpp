@@ -23,15 +23,19 @@ int main(){
                beiju.begin(); 
             }
             else if(testCase[i] == ']'){
-                for(int j = 0; j < i; j++){
-                    beiju.move_up();
-                }
+                beiju.end();
             }
             else{
                 beiju.insert_after(testCase[i]);
             }
+        }
+        beiju.begin();
+        while(beiju.get_iterator() != '['){
+            fout << beiju.get_iterator();
             beiju.move_up();
         }
+        beiju.clear();
+        fout << endl;
     }
     infile.close();
     fout.close();
