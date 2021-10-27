@@ -35,8 +35,13 @@ class List{
             it = &n;
             size = 1;
         }
-        int get_iterator(){
-            return it->val; // Will return the value where the iterator is
+        char get_iterator(){
+            if(it == nullptr){
+                return '[';
+            }
+            else{
+                return it->val; // Will return the value where the iterator is
+            }
         }
         void begin(){
             it = front; // will move iterator to the beginning

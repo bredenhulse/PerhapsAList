@@ -17,18 +17,20 @@ int main(){
     fout.open("outfile");
     string testCase;
     while(infile >> testCase){
+        beiju.begin();
         for(int i = 0; i < testCase.size(); i++){
-            if(testCase[i] = '['){
+            if(testCase[i] == '['){
                beiju.begin(); 
             }
-            else if(testCase[i] = ']'){
+            else if(testCase[i] == ']'){
                 for(int j = 0; j < i; j++){
                     beiju.move_up();
                 }
             }
             else{
-                fout << beiju.get_iterator();
+                beiju.insert_after(testCase[i]);
             }
+            beiju.move_up();
         }
     }
     infile.close();
