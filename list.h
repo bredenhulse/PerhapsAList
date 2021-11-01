@@ -25,8 +25,8 @@ class List{
 
     public:
         List(){
-            this->front = nullptr;
-            this->it = nullptr;
+            this->front = new Node('[');
+            this->it = front;
             this->size = 0;
         }
         List(char v){
@@ -37,7 +37,7 @@ class List{
         }
         char get_iterator(){
             if(it == nullptr){
-                return '[';
+                return ']';
             }
             else{
                 return it->val; // Will return the value where the iterator is
@@ -77,14 +77,11 @@ class List{
             delete temp;
         }
         void insert_after(char y){ //insert value where desired
-            if(it->val == '['){
+            if(it->next != nullptr){
                 Node *temp = new Node(y);
-                
-            }
-            else if(front == nullptr){
-                Node *temp = new Node(y);
+                temp->next = it->next;
+                it->next = temp;
                 it = temp;
-                front = temp;
             }
             else{
                 Node* temp = new Node(y);
