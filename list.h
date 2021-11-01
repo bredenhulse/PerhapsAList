@@ -77,7 +77,11 @@ class List{
             delete temp;
         }
         void insert_after(char y){ //insert value where desired
-            if(front == nullptr){
+            if(it->val == '['){
+                Node *temp = new Node(y);
+                
+            }
+            else if(front == nullptr){
                 Node *temp = new Node(y);
                 it = temp;
                 front = temp;
