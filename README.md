@@ -1,1 +1,1 @@
-Description: You will be able to make a linked list and do some functions.
+Description: It will read in an input file and will send it to an output file.
